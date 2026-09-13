@@ -4,7 +4,7 @@ test('完整叙事链、主题记忆、翻页、预览与键盘返回', async ({
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page).toHaveTitle('纸间 · 交互模板');
+  await expect(page).toHaveTitle('个人3D交互简历网站');
   await expect(page.getByRole('heading', { name: /把想法，\s*贴在纸上。/ })).toBeVisible();
   await page.getByRole('button', { name: '切换红黑主题' }).click();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');

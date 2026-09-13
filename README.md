@@ -1,10 +1,10 @@
-# 纸间 · 交互模板
+# 个人3D交互简历网站
 
 一个以纸张、便签与原创几何角色为主题的 React 网站模板。所有角色、叙事、能力描述与作品均为虚构示例，不代表真实人物、工作履历或项目成果。
 
 **公开展示通用模板代码与演示，项目自身许可证尚未指定（UNLICENSED）。**
 
-在线体验：[纸间](https://x748873762.github.io/paper-character-template/)。
+在线体验：[个人3D交互简历网站](https://x748873762.github.io/personal-3d-interactive-resume/)。
 
 ## 本地运行
 

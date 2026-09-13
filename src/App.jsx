@@ -63,7 +63,7 @@ export default function App() {
   }, []);
   return <>
     <a className="skip-link" href="#chapter-0" onClick={e => go(e, 'chapter-0')}>跳到叙事内容</a>
-    <header className="site-header"><a className="wordmark" href="#home" onClick={e => go(e, 'home')}>纸间<span>纸与形状的游乐场</span></a><div className="theme-controls" role="group" aria-label="主题切换">{[['dark', '红黑'], ['light', '暖灰']].map(([id, name]) => <button key={id} onClick={() => setTheme(id)} aria-label={`切换${name}主题`} aria-pressed={theme === id}><i className={`arcade ${id}`}/><span>{name}</span></button>)}</div></header>
+    <header className="site-header"><a className="wordmark" href="#home" onClick={e => go(e, 'home')}>个人3D交互简历网站<span>纸与形状的游乐场</span></a><div className="theme-controls" role="group" aria-label="主题切换">{[['dark', '红黑'], ['light', '暖灰']].map(([id, name]) => <button key={id} onClick={() => setTheme(id)} aria-label={`切换${name}主题`} aria-pressed={theme === id}><i className={`arcade ${id}`}/><span>{name}</span></button>)}</div></header>
     <main>
       <div className="narrative">
         <div className={`stage ${home ? 'at-home' : 'in-story'}`}><Character active={active} home={home} theme={theme}/><div className="role-notes" aria-label="五段叙事">{chapters.map((item, i) => <a key={item.label} href={`#chapter-${i}`} onClick={e => go(e, `chapter-${i}`)} className={`paper role-note note-${i}`} aria-current={!home && active === i ? 'step' : undefined}><small>0{i + 1}</small>{item.label}<span>↗</span></a>)}</div><span className="character-caption">圆点 / 几何世界的虚构居民</span></div>
@@ -76,7 +76,7 @@ export default function App() {
       </div>
       <Gallery onPreview={setPreview}/>
       <section id="capabilities" className="capabilities" tabIndex={-1}><p className="section-index">03 / 五张小纸条</p><h2>好的表达，<br/>从简单开始。</h2><div className="capability-notes">{capabilities.map((text, index) => <article className="paper capability" key={text} tabIndex={0}><span>0{index + 1}</span><h3>{text}</h3><p>{['先看见重点，再慢慢发现细节。', '给内容空间，也给视线方向。', '每一次操作，都有清楚的回应。', '用适量的变化，串起阅读过程。', '留下可以读懂、继续改写的故事。'][index]}</p></article>)}</div></section>
-      <footer id="ending" className="ending" tabIndex={-1}><p className="section-index">04 / 故事未完</p><h2>下一张纸，<br/><em>留给你的想法。</em></h2><p>这是一个通用交互示例。<br/>角色、叙事与作品均为虚构。</p><a className="paper ending-note" href="#home" onClick={e => go(e, 'home')}>回到第一页 <span>↑</span></a><div className="footer-line"><span>纸间 / 交互模板</span><span>用简单的形状，装下新的想象。</span></div></footer>
+      <footer id="ending" className="ending" tabIndex={-1}><p className="section-index">04 / 故事未完</p><h2>下一张纸，<br/><em>留给你的想法。</em></h2><p>这是一个通用交互示例。<br/>角色、叙事与作品均为虚构。</p><a className="paper ending-note" href="#home" onClick={e => go(e, 'home')}>回到第一页 <span>↑</span></a><div className="footer-line"><span>个人3D交互简历网站</span><span>用简单的形状，装下新的想象。</span></div></footer>
     </main>
     {!home && <a className="back-home paper" href="#home" onClick={e => go(e, 'home')} aria-label="返回首屏">↑<span>首屏</span></a>}
     {preview && <Preview item={preview} onClose={() => setPreview(null)}/>}
