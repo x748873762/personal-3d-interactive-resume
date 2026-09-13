@@ -67,7 +67,7 @@ pnpm check:privacy
 pnpm prepare:release
 ```
 
-脚本只将 `scripts/release-files.mjs` 中的文件写入新的 `release-candidate/`，生成 SHA-256 清单。不包含依赖目录、构建文件、测试截图或本地管理文档。目标目录已存在时拒绝覆盖；需要重做时，先把旧候选目录改名留存。候选包可在独立目录重新安装运行。
+脚本只将 `scripts/release-files.mjs` 中的文件写入新的 `release-candidate/`。不包含依赖目录、构建文件、测试截图或本地管理文档。目标目录已存在时拒绝覆盖；需要重做时，先把旧候选目录改名留存。候选包可在独立目录重新安装运行。
 
 此命令只准备本地候选文件，不执行 Git、不访问远端、不部署。项目线上版本由维护者单独发布至 gh-pages 分支；main 保留通用源码。
 
